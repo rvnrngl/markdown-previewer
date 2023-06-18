@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100;200;300;400;500;600;700&display=swap');
+
+body, h3, h2, h1, p {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    background-color: #FFF0E5;
+}
+
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 40px 0;
+    gap: 1rem;
+}
+
+ #editorWrapper {
+    width: auto;
+    height: auto;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 1px 1px 0 1px;
+    transition: 0.3s ease;
+    box-shadow: 1px 2px gray;
+ }
+
+ #editorWrapper:hover, #previewerWrapper:hover {
+    box-shadow: 7px 12px;
+    translate: -2px -2px;
+ }
+ 
+ .fullScreen {
+    transition: 0.3s ease-out;
+ }
+
+.fullScreen:hover {
+    cursor: pointer;
+    opacity: 0.5;
+ }
+
+ #editorBar {
+    width: 200px;
+    height: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #10162F;
+    padding: 2px 4px 0 4px;
+ }
+
+ #editor {
+    width: 200px;
+    background-color: transparent;
+    resize: vertical;
+    min-height: 70px;
+    padding: 0 4px;
+    font-size: 0.65rem;
+    border: none;
+    outline: none;
+ }
+
+ #editorFullBar {
+    width: 100%;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #D9FFFF;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ #editorRightBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+ }
+
+ #previewerWrapper {
+    width: auto;
+    height: auto;
+    background-color: #FFFFFF;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 1px 1px 0 1px;
+    transition: 0.3s ease;
+    box-shadow: 1px 2px gray;
+ }
+
+ #previewerBar {
+    width: 300px;
+    min-width: 90%;
+    height: 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background-color: #10162F;
+    padding: 2px 4px 0 4px;
+ }
+
+ #previewerFullBar {
+    width: 100%;
+    font-family: 'M PLUS 1 Code', sans-serif;
+    color: #D9FFFF;
+    font-size: 13px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ #previewerRightBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+ }
+
+ #preview {
+    width: 300px;
+    padding: 10px 0 10px 5px;
+    text-align:left;
+    font-size: 0.8rem;
+    overflow-wrap: break-word
+ }
+
+ @media only screen and (min-width: 630px) {
+    #editorBar {
+        width: 400px;
+        height: 30px;
+    }
+
+    #editor {
+        width: 400px;
+        min-height: 130px;
+        font-size: 1rem;
+    }
+
+    #editorFullBar {
+        padding-top: 4px;
+        font-size: 15px;
+    }
+
+    #previewerBar {
+        width: 630px;
+        height: 30px;
+    }
+
+    #preview {
+        width: 630px;
+        min-height: 130px;
+        font-size: 1rem;
+    }
+
+    #previewerFullBar {
+        padding-top: 4px;
+        font-size: 15px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    #container {
+        padding-top: 40px;
+        flex-direction: row-reverse;
+        align-items: baseline;
+        justify-content: center;
+    }
+    #editorBar {
+        width: 400px;
+    }
+
+    #editor {
+        width: 400px;
+        min-height: 300px;
+    }
+
+    #previewerBar {
+        width: 500px;
+    }
+
+    #preview {
+        width: 500px;
+    }
+  }
+
+@media only screen and (min-width: 1200px) {
+    #editorBar {
+        width: 450px;
+    }
+
+    #editor {
+        width: 450px;
+        min-height: 300px;
+        font-size: 1.3rem;
+    }
+
+    #previewerBar {
+        width: 700px;
+    }
+
+    #preview {
+        width: 700px;
+        font-size: 1.5rem;
+    }
+}
